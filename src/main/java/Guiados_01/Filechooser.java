@@ -5,9 +5,9 @@ import javax.swing.JOptionPane;
 
 public class Filechooser extends javax.swing.JFrame {
 
-    /*
+/*
 EJEMPLO 14 | File Chooser.
-     */
+ */
     public Filechooser() {
         initComponents();
         setLocationRelativeTo(null);
