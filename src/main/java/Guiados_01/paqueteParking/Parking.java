@@ -9,6 +9,7 @@ public class Parking extends javax.swing.JFrame {
 
     public Parking() {
         initComponents();
+        setLocationRelativeTo(null);
         coches = 0;
     }
 
