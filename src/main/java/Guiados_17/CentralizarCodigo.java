@@ -1,43 +1,10 @@
 
-package Guiados_01.ProyectoCalculos;
+package Guiados_17;
 
-/*
-EJEMPLO 18 | Código Centralizado.
- */
-public class VentanaCalculos extends javax.swing.JFrame {
+public class CentralizarCodigo extends javax.swing.JFrame {
 
-    public VentanaCalculos() {
+    public CentralizarCodigo() {
         initComponents();
-        setLocationRelativeTo(null);
-    }
-    
-    void Sumar(){
-        String cad1, cad2;
-        int a,b,s;
-        
-        cad1 = txtNumero1.getText();
-        cad2 = txtNumero2.getText();
-        a = Integer.parseInt(cad1);
-        b = Integer.parseInt(cad2);
-        s=a+b;
-        etiResultado.setText(""+s);
-    }
-    
-    void Restar(){
-         String cad1, cad2;
-        int a,b,r;
-        
-        cad1 = txtNumero1.getText();
-        cad2 = txtNumero2.getText();
-        a = Integer.parseInt(cad1);
-        b = Integer.parseInt(cad2);
-        r=a-b;
-        etiResultado.setText(""+r);
-    }
-    
-    void Borrar(){
-        txtNumero1.setText("");
-        txtNumero2.setText("");
     }
 
     @SuppressWarnings("unchecked")
@@ -160,7 +127,7 @@ public class VentanaCalculos extends javax.swing.JFrame {
                         .addComponent(btnSumar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnRestar, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE)
                         .addComponent(btnBorrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 163, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -243,67 +210,73 @@ public class VentanaCalculos extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnSumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSumarActionPerformed
-        Sumar();
-    }//GEN-LAST:event_btnSumarActionPerformed
-
+    
+     void Sumar(){
+        String cad1, cad2;
+        int a,b,s;
+        
+        cad1 = txtNumero1.getText();
+        cad2 = txtNumero2.getText();
+        a = Integer.parseInt(cad1);
+        b = Integer.parseInt(cad2);
+        s=a+b;
+        etiResultado.setText(""+s);
+    }
+    
+    void Restar(){
+         String cad1, cad2;
+        int a,b,r;
+        
+        cad1 = txtNumero1.getText();
+        cad2 = txtNumero2.getText();
+        a = Integer.parseInt(cad1);
+        b = Integer.parseInt(cad2);
+        r=a-b;
+        etiResultado.setText(""+r);
+    }
+    
+    void Borrar(){
+        txtNumero1.setText("");
+        txtNumero2.setText("");
+    }
     private void menuSumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSumarActionPerformed
-       Sumar();
+        Sumar();
     }//GEN-LAST:event_menuSumarActionPerformed
+
+    private void menuRestarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuRestarActionPerformed
+        Restar();
+    }//GEN-LAST:event_menuRestarActionPerformed
+
+    private void menuBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuBorrarActionPerformed
+        Borrar();
+    }//GEN-LAST:event_menuBorrarActionPerformed
 
     private void txtNumero1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNumero1ActionPerformed
         Sumar();
     }//GEN-LAST:event_txtNumero1ActionPerformed
 
     private void txtNumero2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNumero2ActionPerformed
-      Sumar();
+        Sumar();
     }//GEN-LAST:event_txtNumero2ActionPerformed
 
+    private void btnSumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSumarActionPerformed
+        Sumar();
+    }//GEN-LAST:event_btnSumarActionPerformed
+
     private void btnRestarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRestarActionPerformed
-     Restar();
+        Restar();
     }//GEN-LAST:event_btnRestarActionPerformed
 
-    private void menuRestarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuRestarActionPerformed
-      Restar();
-    }//GEN-LAST:event_menuRestarActionPerformed
-
     private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
-     Borrar();
+        Borrar();
     }//GEN-LAST:event_btnBorrarActionPerformed
 
-    private void menuBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuBorrarActionPerformed
-    Borrar();
-    }//GEN-LAST:event_menuBorrarActionPerformed
 
- 
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VentanaCalculos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VentanaCalculos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VentanaCalculos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VentanaCalculos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new VentanaCalculos().setVisible(true);
+                new CentralizarCodigo().setVisible(true);
             }
         });
     }

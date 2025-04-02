@@ -1,15 +1,12 @@
-package Guiados_01;
+
+package Guiados_13;
 
 import java.awt.Color;
 
-public class MenusEmergentes extends javax.swing.JFrame {
+public class MenuEmergente extends javax.swing.JFrame {
 
-/*
-EJEMPLO 13 | Barra de Menus.
-*/
-    public MenusEmergentes() {
+    public MenuEmergente() {
         initComponents();
-        
     }
 
     @SuppressWarnings("unchecked")
@@ -33,7 +30,7 @@ EJEMPLO 13 | Barra de Menus.
 
         menuVerde.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         menuVerde.setForeground(new java.awt.Color(0, 0, 0));
-        menuVerde.setText("Verdes");
+        menuVerde.setText("Verde");
         menuVerde.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 menuVerdeActionPerformed(evt);
@@ -72,36 +69,45 @@ EJEMPLO 13 | Barra de Menus.
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
-        /*if (evt.getButton() == 1) {
-            JOptionPane.showMessageDialog(null, "Pulso el izquierdo");
-        } else if (evt.getButton() == 2) {
-            JOptionPane.showMessageDialog(null, "Pulso el central");
-        } else if (evt.getButton() == 3) {
-            JOptionPane.showMessageDialog(null, "Pulso el derecho");
-        }*/
-        
-        menuEmergente.show(this,evt.getX(),evt.getY());
-
-    }//GEN-LAST:event_formMouseClicked
-
     private void menuRojoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuRojoActionPerformed
-     this.getContentPane().setBackground(Color.RED);
+this.getContentPane().setBackground(Color.RED);
     }//GEN-LAST:event_menuRojoActionPerformed
 
+    private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
+     menuEmergente.show(this,evt.getX(),evt.getY());
+    }//GEN-LAST:event_formMouseClicked
+
     private void menuVerdeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuVerdeActionPerformed
-     this.getContentPane().setBackground(Color.GREEN);
+    this.getContentPane().setBackground(Color.GREEN);
     }//GEN-LAST:event_menuVerdeActionPerformed
 
     private void menuAzulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAzulActionPerformed
-    this.getContentPane().setBackground(Color.BLUE);
+     this.getContentPane().setBackground(Color.BLUE);
     }//GEN-LAST:event_menuAzulActionPerformed
 
     public static void main(String args[]) {
+          try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(MenuEmergente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(MenuEmergente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(MenuEmergente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(MenuEmergente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
 
+        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MenusEmergentes().setVisible(true);
+                new MenuEmergente().setVisible(true);
             }
         });
     }
