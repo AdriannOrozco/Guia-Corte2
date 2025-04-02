@@ -1,10 +1,8 @@
-package Guiados_01;
-/*
-EJEMPLO 19 | DistribucionPaneles y paneles.
- */
-public class DistribucionPaneles extends javax.swing.JFrame {
+package Guiados_19;
 
-    public DistribucionPaneles() {
+public class DistribucionPaneles2 extends javax.swing.JFrame {
+
+    public DistribucionPaneles2() {
         initComponents();
         setLocationRelativeTo(null);
     }
@@ -296,21 +294,23 @@ public class DistribucionPaneles extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DistribucionPaneles.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DistribucionPaneles2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DistribucionPaneles.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DistribucionPaneles2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DistribucionPaneles.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DistribucionPaneles2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DistribucionPaneles.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DistribucionPaneles2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new DistribucionPaneles().setVisible(true);
+                new DistribucionPaneles2().setVisible(true);
             }
         });
     }
