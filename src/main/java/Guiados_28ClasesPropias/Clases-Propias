@@ -1,0 +1,80 @@
+
+Supongamos que programamos una Clase de objetos llamada Rectangulo, la cual permitirá construir objetos que representen a rectángulos.
+
+1.	¿Cómo declararía y construiría un objeto llamado suelo del tipo Rectangulo?
+
+
+2.	Supongamos que las propiedades de los objetos de la clase Rectangulo sean las siguientes:
+
+a.	Base (double)
+b.	Altura (double)
+
+¿Qué métodos de tipo set programaría para cambiar las propiedades de los objetos del tipo Rectangulo?
+
+
+3.	Como ejemplo de los métodos anteriores, suponga que quiere asignar al objeto suelo una base de 30 y una altura de 50. ¿Qué código usaría?
+
+
+4.	Teniendo en cuenta que nos puede interesar conocer el área de un objeto Rectangulo y su perímetro, y teniendo en cuenta que los objetos Rectangulo tienen dos propiedades (Base y Altura), ¿qué cuatro métodos get serían interesantes de programar para los objetos del tipo Rectangulo?
+
+
+5.	Teniendo en cuenta los métodos del punto 4. Supongamos que quiero almacenar en una variable double llamada area el área del objeto suelo. ¿Qué código usaría? Y si quiero almacenar el perímetro del objeto suelo en una variable llamada peri?
+
+
+
+
+----- RESPUESTA 1: DECLARACIÓN Y CONSTRUCCIÓN DEL OBJETO RECTÁNGULO -----
+Rectangulo suelo = new Rectangulo();
+
+
+
+
+
+----- RESPUESTA 2: MÉTODOS SET PARA LAS PROPIEDADES -----
+
+public void setBase(double base) {
+    this.base = base;
+}
+
+public void setAltura(double altura) {
+    this.altura = altura;
+}
+
+
+
+
+
+----- RESPUESTA 3: ASIGNAR BASE 30 Y ALTURA DE 50 -----
+
+suelo.setBase(30);
+suelo.setAltura(50)
+
+
+
+
+
+----- RESPUESTA 4: MÉTODOS PARA EL RECTÁNGULO -----
+
+public double getBase() {
+    return base;
+}
+
+public double getAltura() {
+    return altura;
+}
+
+public double getArea() {
+    return base * altura;
+}
+
+public double getPerimetro() {
+    return 2 * (base + altura);
+}
+
+
+
+
+----- RESPUESTA 5: ALMACENAR DATOS EN VARIABLES -----
+
+double area = suelo.getArea();
+double peri = suelo.getPerimetro();

@@ -1,0 +1,41 @@
+Hasta ahora ha usado objetos aunque no tenga mucha conciencia de ello. Por ejemplo ha usado botones. Como ejercicio se propone lo siguiente:
+-	¿Cuál es el nombre de la clase de los botones normales que usa en sus ventanas?
+-	¿Cómo declararía un botón llamado btnAceptar, y otro llamado btnCancelar?
+-	¿Cómo construiría dichos botones?
+-	Indique algunos métodos para cambiar propiedades de dichos botones (métodos set)
+-	Indique algunos métodos para pedirle información a dichos botones (métodos get)
+-	Indique algún método para dar órdenes a dichos botones (algún método que no sea ni set ni get)
+
+
+RESPUESTAS:
+
+1. Nombre de la clase:
+el nombre de la clase es JButton.
+
+2. Declaraciones:
+
+JButton btnAceptar;
+Jbutton btnCancelar;
+
+3. Construcción de los botones:
+
+btnAceptar = new JButton("Aceptar");
+btnCancelar = new JButton("Cancelar");
+
+4. Métodos set:
+
+btnAceptar.setEnabled(false) -> Esto desabilita el botón
+btnAceptar.setText("Click aquí") -> Esto cambia el contenido.
+bntCancelarsetBackground(Color RED) -> Esto cambia el color de fondo.
+
+5. Métodos get:
+
+btnCancelar.getText() -> Esto obtiene el texto actual del botón
+btnAceptar.getBackground() -> Esto obtiene el color de fondo
+btnAceptar.getForeground() -> Esto obtiene el color del texto
+btnCancelar.getSize() -> Esto obtiene el tamaño del botón
+
+6. Métodos para dar ordenes:
+
+btnAceptar.requestFocus() -> Esto solicita el foco para el botón
+btnCancelar.repaint() -> Esto fuerza el redibujado del botón
